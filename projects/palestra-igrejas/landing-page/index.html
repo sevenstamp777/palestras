@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palestras para Igrejas | Erick Bianchini Garcia</title>
+    <meta name="description" content="Palestra 'Quando o Amor Fala' para casais da sua igreja. Restauração matrimonial com princípios bíblicos. Pregador desde 2001.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2C5F2D;
+            --primary-dark: #1B3D1C;
+            --accent: #C9A84C;
+            --accent-light: #F5E6C8;
+            --dark: #1A1A1A;
+            --light: #FAFAF5;
+            --white: #FFFFFF;
+            --gray: #6B6B6B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.3;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER */
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 18px 0;
+            text-align: center;
+        }
+
+        header .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: var(--white);
+            padding: 80px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--dark);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 6px 18px;
+            border-radius: 20px;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            max-width: 750px;
+            margin: 0 auto 20px;
+            font-weight: 700;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero-sub {
+            font-size: 1.15rem;
+            opacity: 0.88;
+            max-width: 600px;
+            margin: 0 auto 38px;
+        }
+
+        .hero-author {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 30px;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--accent);
+            color: var(--dark);
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 16px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .hero-cta:hover {
+            background: #d4b55a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201, 168, 76, 0.4);
+        }
+
+        /* PROBLEM */
+        .problem {
+            background: var(--white);
+            padding: 80px 0;
+        }
+
+        .problem h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary-dark);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .problem-card {
+            background: var(--light);
+            border-left: 4px solid var(--accent);
+            padding: 28px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .problem-card p {
+            font-size: 0.95rem;
+            color: var(--gray);
+        }
+
+        .problem-card strong {
+            color: var(--dark);
+        }
+
+        /* SOLUTION */
+        .solution {
+            background: var(--primary);
+            color: var(--white);
+            padding: 80px 0;
+        }
+
+        .solution h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .solution h2 span {
+            color: var(--accent);
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .topic-item {
+            background: rgba(255,255,255,0.08);
+            border-radius: 10px;
+            padding: 24px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .topic-num {
+            background: var(--accent);
+            color: var(--dark);
+            font-weight: 700;
+            font-size: 0.8rem;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .topic-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* ABOUT */
+        .about {
+            background: var(--white);
+            padding: 80px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 24px;
+            color: var(--primary-dark);
+        }
+
+        .about-content p {
+            color: var(--gray);
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat {
+            text-align: center;
+            background: var(--light);
+            padding: 20px 10px;
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 4px;
+        }
+
+        .about-img {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            border-radius: 16px;
+            padding: 40px;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .about-img .author-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .about-img .author-title {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .about-img blockquote {
+            font-size: 0.95rem;
+            font-style: italic;
+            opacity: 0.9;
+            border-left: 3px solid var(--accent);
+            padding-left: 16px;
+            text-align: left;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials {
+            background: var(--light);
+            padding: 80px 0;
+        }
+
+        .testimonials h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary-dark);
+        }
+
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .test-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        .test-card .stars {
+            color: var(--accent);
+            font-size: 1rem;
+            margin-bottom: 14px;
+        }
+
+        .test-card p {
+            font-size: 0.95rem;
+            color: var(--gray);
+            margin-bottom: 18px;
+            font-style: italic;
+        }
+
+        .test-card .author {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--dark);
+        }
+
+        .test-card .role {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* PRICE */
+        .price {
+            background: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .price h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            color: var(--primary-dark);
+        }
+
+        .price-sub {
+            color: var(--gray);
+            margin-bottom: 40px;
+            font-size: 1rem;
+        }
+
+        .price-box {
+            background: var(--light);
+            border: 2px solid var(--primary);
+            border-radius: 16px;
+            padding: 50px 40px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .price-tag {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .price-note {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin: 8px 0 30px;
+        }
+
+        .price-features {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .price-features li {
+            list-style: none;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 0.95rem;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .price-features li::before {
+            content: '✓';
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .price-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .price-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(44, 95, 45, 0.3);
+        }
+
+        .price-guarantee {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* FAQ */
+        .faq {
+            background: var(--light);
+            padding: 80px 0;
+        }
+
+        .faq h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary-dark);
+        }
+
+        .faq-list {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+        }
+
+        .faq-item h4 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .faq-item p {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* FINAL CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .final-cta p {
+            opacity: 0.85;
+            margin-bottom: 36px;
+            font-size: 1.05rem;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.85rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-stats { grid-template-columns: repeat(3, 1fr); }
+            .price-tag { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.7rem; }
+            .hero { padding: 60px 0 80px; }
+            .about-stats { grid-template-columns: 1fr; }
+            .price-box { padding: 30px 20px; }
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 14px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="logo">Transformando Vidas — Erick Bianchini Garcia</div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">Para Igrejas e Comunidades</div>
+            <h1>Uma <span>Palestra</span> Que Pode Transformar os Casamentos da Sua Igreja</h1>
+            <p class="hero-sub">'Quando o Amor Fala' — restauração matrimonial com princípios bíblicos, histórias reais e ferramentas práticas para casais em crise.</p>
+            <a href="https://wa.me/5518997130824?text=Olá%20Erick!%20Vi%20a%20landing%20page%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20palestra%20para%20nossa%20igreja." class="hero-cta" target="_blank">
+                Quero Convidar para Nossa Igreja
+            </a>
+            <p class="hero-author">Palestrante desde 2001 · Autor de "Quando o Amor Fala"</p>
+        </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="problem">
+        <div class="container">
+            <h2>O Problema Que Sua Igreja Provavelmente Enfrenta</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <p><strong>Casais em silêncio.</strong> Dividem o mesmo teto, mas vivem como estranhos. A distância emocional cresce sem que ninguém perceba.</p>
+                </div>
+                <div class="problem-card">
+                    <p><strong>Pastores sobrecarregados.</strong> Cuidam da alma da igreja, mas não têm ferramenta prática pra ajudar casais em crise.</p>
+                </div>
+                <div class="problem-card">
+                    <p><strong>Membros saindo.</strong> Casamentos em crise geram afastamento da igreja, da comunidade e da fé.</p>
+                </div>
+                <div class="problem-card">
+                    <p><strong>Sem falar sobre isso.</strong> A dor conjugal é tabu. Ninguém quer admitir que está проблема, mesmo dentro da igreja.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="solution">
+        <div class="container">
+            <h2>O Que a Palestra <span>Proporciona</span></h2>
+            <div class="topics-grid">
+                <div class="topic-item">
+                    <div class="topic-num">1</div>
+                    <div class="topic-text">Fé que sustenta no vale mais profundo do casamento</div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-num">2</div>
+                    <div class="topic-text">Perdão como caminho de libertação真实 e não como fraqueza</div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-num">3</div>
+                    <div class="topic-text">Persistência que fortalece quando tudo convida a desistir</div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-num">4</div>
+                    <div class="topic-text">Compromisso que permanece quando as emoções vacilam</div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-num">5</div>
+                    <div class="topic-text">Comunicação que reconecta corações之间的距离</div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-num">6</div>
+                    <div class="topic-text">Encorajamento que devolve forces ao cônjuge cansado</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Quem Está no Palco</h2>
+                    <p>Erick Bianchini Garcia é <strong>pregador do evangelho e palestrante cristão desde 2001</strong>, com mais de duas décadas de caminhada ministerial.</p>
+                    <p>Autor do livro <strong>"Quando o Amor Fala"</strong>, já impactou milhares de casais com mensagem de restauração, fé e esperança.</p>
+                    <p>Casado há 8 anos com Adriana Araújo de Oliveira, vive na prática os princípios que ensina — e prova que casamento restaurado não é exceção, é possibilidade.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">24+</div>
+                            <div class="stat-label">Anos de Ministério</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">2.400+</div>
+                            <div class="stat-label">Casais Impactados</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">Anos de Casamento</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-img">
+                    <div class="author-name">Erick Bianchini Garcia</div>
+                    <div class="author-title">Palestrante · Pregador · Autor</div>
+                    <blockquote>
+                        "O amor não foi embora. Ele pode estar ferido, confuso, distante — mas pode ser restaurado. A especialidade de Deus éresser o que foi quebrado."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>O Que Dizem Quem Conheceu o Trabalho</h2>
+            <div class="test-grid">
+                <div class="test-card">
+                    <div class="stars">★★★★★</div>
+                    <p>" Tivemos um Retiro de Casais e o Erick trouxe uma mensagem que tocou corações. Tivemos casais chorando, outros se reconciliando. Resultado real."</p>
+                    <div class="author">Pr. Ricardo Mendes</div>
+                    <div class="role">Igreja Batista em Presidente Prudente</div>
+                </div>
+                <div class="test-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Ela veio sem vontade, achando que seria mais uma talk sem profundidade. Saiu transformada. Voltou pra casa diferente. O mensaje dela é real."</p>
+                    <div class="author">Carlos e Fernanda</div>
+                    <div class="role">Casal da igreja em São Paulo</div>
+                </div>
+                <div class="test-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Organizamos a palestra em 2 semanas, sem planejamento grande. O Erick se adaptou ao nosso tempo e nossa realidade. Superou expectativas."</p>
+                    <div class="author">Líder de Jovens</div>
+                    <div class="role">Comunidade Evangélica em Rondônia</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICE -->
+    <section class="price">
+        <div class="container">
+            <h2>Quanto Custa Ter Essa Palestra na Sua Igreja</h2>
+            <p class="price-sub">Investimento fixo. Sem surpresas. Sem mensalidades.</p>
+            <div class="price-box">
+                <div class="price-tag">R$ 750</div>
+                <div class="price-note">palestra avulsa para sua igreja ou comunidade</div>
+                <ul class="price-features">
+                    <li>Palestra completa de até 2 horas</li>
+                    <li>Temas bíblicos com histórias reais</li>
+                    <li>Exercícios práticos para casais</li>
+                    <li>Momento de interação e perguntas</li>
+                    <li>Disponível para churches em todo o Brasil</li>
+                    <li>Formação Online sob consulta</li>
+                </ul>
+                <a href="https://wa.me/5518997130824?text=Olá%20Erick!%20Gostaria%20de%20contratar%20a%20palestra%20para%20nossa%20igreja.%20Qual%20a%20disponibilidade?" class="price-cta" target="_blank">
+                    Agendar Pela Igreja
+                </a>
+                <p class="price-guarantee">📞 Contato direto via WhatsApp — sem intermediários</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h4>Em quanto tempo precisamos organizar?</h4>
+                    <p>O ideal são pelo menos 15 dias de antecedência. Mas se o calendário permitir, consigo me adaptar a prazos mais curtos.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Precisa de estrutura especial?</h4>
+                    <p>Apenas um microfone e um projetor. O resto eu levo. Cadeira, mesa, telão — o básico é suficiente.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Funciona para casais de quanto tempo?</h4>
+                    <p>Casamentos jovens, maduros, em crise ou apenas querendo fortalecer. A mensagem serve pros dois extremos.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>E se o Pastor quiser algo diferente?</h4>
+                    <p>A palestra pode ser adaptada ao tema do evento, ao tempo disponível e à necessidade específica da igreja.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Posso contratar mais de uma palestra?</h4>
+                    <p>Sim. Palavras avulsas, casados de casais, retiros — há opções com condições especiais para múltiplos encontros.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Sua Igreja Pode Ser o Próximo Lugar de Restauração</h2>
+            <p>Cada casamento restaurado impacta famílias inteiras. Uma palestra pode ser o início de uma mudança que ninguém viu vindo.</p>
+            <a href="https://wa.me/5518997130824?text=Olá%20Erick!%20Vi%20a%20landing%20page%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20palestra%20para%20nossa%20igreja." class="hero-cta" target="_blank">
+                Falar no WhatsApp Agora
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>Transformando Vidas · Erick Bianchini Garcia · Palestrante desde 2001</p>
+            <p>WhatsApp: (18) 99713-0824</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/5518997130824?text=Olá%20Erick!%20Vi%20a%20landing%20page%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20palestra%20para%20nossa%20igreja." class="whatsapp-float" target="_blank">
+        💬 Falar no WhatsApp
+    </a>
+
+</body>
+</html>
