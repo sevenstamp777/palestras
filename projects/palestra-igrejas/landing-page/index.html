@@ -1,1110 +1,1123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palestra para Igrejas | Erick Bianchini Garcia — Restauração Matrimonial</title>
-    <meta name="description" content="Palestra 'Quando o Amor Fala' para casais da sua igreja. Restauração matrimonial com princípios bíblicos. Pregador desde 2001. R$ 750.">
-    
-    <!-- Open Graph / WhatsApp -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://palestras.transformandovidas.net.br/">
-    <meta property="og:title" content="Palestra para Igrejas — Quando o Amor Fala | Erick Bianchini Garcia">
-    <meta property="og:description" content="Restauração matrimonial com princípios bíblicos, histórias reais e ferramentas práticas. Palestrante desde 2001. Convide para sua igreja por R$ 750.">
-    <meta property="og:image" content="https://transformandovidas.net.br/img/og-palestra.jpg">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Palestra para Igrejas — Quando o Amor Fala">
-    <meta name="twitter:description" content="Restauração matrimonial com princípios bíblicos. Palestrante desde 2001.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary: #1B4332;
-            --primary-mid: #2D6A4F;
-            --primary-light: #40916C;
-            --accent: #D4A853;
-            --accent-light: #F5E9CB;
-            --dark: #1A1A1A;
-            --text: #3D3D3D;
-            --muted: #6B7280;
-            --light: #FAFAF8;
-            --white: #FFFFFF;
-            --soft: #F3F4F1;
-            --divider: rgba(27, 67, 50, 0.1);
-        }
-
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Source Sans 3', -apple-system, sans-serif;
-            color: var(--text);
-            background: var(--light);
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', Georgia, serif;
-            line-height: 1.25;
-            color: var(--dark);
-        }
-
-        .container {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        img { max-width: 100%; }
-
-        a { text-decoration: none; }
-
-        /* ── HEADER ── */
-        header {
-            background: var(--white);
-            border-bottom: 1px solid var(--divider);
-            padding: 16px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        header .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .header-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1rem;
-            color: var(--primary);
-            letter-spacing: 0.5px;
-        }
-
-        .header-logo span {
-            color: var(--accent);
-        }
-
-        .header-cta {
-            background: var(--primary);
-            color: var(--white);
-            font-size: 0.85rem;
-            font-weight: 600;
-            padding: 10px 22px;
-            border-radius: 100px;
-            transition: background 0.2s, transform 0.2s;
-        }
-
-        .header-cta:hover {
-            background: var(--primary-mid);
-            transform: translateY(-1px);
-        }
-
-        /* ── HERO ── */
-        .hero {
-            background: var(--primary);
-            color: var(--white);
-            padding: 100px 0 110px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: 
-                radial-gradient(ellipse at 20% 50%, rgba(64, 145, 108, 0.35) 0%, transparent 55%),
-                radial-gradient(ellipse at 80% 20%, rgba(212, 168, 83, 0.15) 0%, transparent 45%);
-            pointer-events: none;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            right: 0;
-            height: 60px;
-            background: var(--light);
-            clip-path: ellipse(55% 100% at 50% 100%);
-        }
-
-        .hero-inner {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            max-width: 760px;
-            margin: 0 auto;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: rgba(212, 168, 83, 0.18);
-            border: 1px solid rgba(212, 168, 83, 0.4);
-            color: var(--accent);
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2.5px;
-            padding: 5px 18px;
-            border-radius: 100px;
-            margin-bottom: 28px;
-        }
-
-        .hero h1 {
-            font-size: clamp(2rem, 5vw, 3.1rem);
-            color: var(--white);
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .hero h1 em {
-            font-style: normal;
-            color: var(--accent);
-        }
-
-        .hero-sub {
-            font-size: 1.1rem;
-            color: rgba(255,255,255,0.78);
-            max-width: 580px;
-            margin: 0 auto 40px;
-            line-height: 1.75;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--accent);
-            color: var(--dark);
-            font-weight: 700;
-            font-size: 1rem;
-            padding: 16px 32px;
-            border-radius: 100px;
-            transition: all 0.25s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-primary:hover {
-            background: #e0b460;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(212, 168, 83, 0.35);
-        }
-
-        .btn-ghost {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: transparent;
-            color: rgba(255,255,255,0.85);
-            font-weight: 600;
-            font-size: 0.95rem;
-            padding: 14px 28px;
-            border-radius: 100px;
-            border: 1.5px solid rgba(255,255,255,0.3);
-            transition: all 0.25s ease;
-        }
-
-        .btn-ghost:hover {
-            background: rgba(255,255,255,0.1);
-            border-color: rgba(255,255,255,0.5);
-        }
-
-        .hero-meta {
-            margin-top: 36px;
-            display: flex;
-            gap: 32px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .hero-meta-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.88rem;
-            color: rgba(255,255,255,0.65);
-        }
-
-        .hero-meta-item .icon {
-            width: 18px;
-            height: 18px;
-            opacity: 0.7;
-        }
-
-        /* ── DIVIDER ── */
-        .section-divider {
-            width: 48px;
-            height: 3px;
-            background: var(--accent);
-            border-radius: 2px;
-            margin: 0 auto 20px;
-        }
-
-        /* ── PROBLEM ── */
-        .section {
-            padding: 90px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 640px;
-            margin: 0 auto 60px;
-        }
-
-        .section-label {
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--primary-light);
-            margin-bottom: 14px;
-        }
-
-        .section-title {
-            font-size: clamp(1.6rem, 3vw, 2.2rem);
-            margin-bottom: 16px;
-        }
-
-        .section-desc {
-            font-size: 1.05rem;
-            color: var(--muted);
-        }
-
-        .problem-section {
-            background: var(--white);
-        }
-
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
-        }
-
-        .problem-card {
-            background: var(--soft);
-            border-radius: 16px;
-            padding: 32px 28px;
-            border: 1px solid var(--divider);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .problem-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--accent);
-            opacity: 0;
-            transition: opacity 0.25s;
-        }
-
-        .problem-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(27, 67, 50, 0.08);
-        }
-
-        .problem-card:hover::before {
-            opacity: 1;
-        }
-
-        .problem-card .icon {
-            font-size: 1.8rem;
-            margin-bottom: 16px;
-            display: block;
-        }
-
-        .problem-card h4 {
-            font-size: 1.05rem;
-            margin-bottom: 10px;
-            font-family: 'Source Sans 3', sans-serif;
-            font-weight: 700;
-        }
-
-        .problem-card p {
-            font-size: 0.92rem;
-            color: var(--muted);
-            line-height: 1.7;
-        }
-
-        /* ── SOLUTION ── */
-        .solution-section {
-            background: var(--primary);
-            color: var(--white);
-        }
-
-        .solution-section .section-title {
-            color: var(--white);
-        }
-
-        .solution-section .section-desc {
-            color: rgba(255,255,255,0.65);
-        }
-
-        .solution-section .section-label {
-            color: var(--accent);
-        }
-
-        .solution-section .section-divider {
-            background: rgba(212, 168, 83, 0.6);
-        }
-
-        .topics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .topic-card {
-            background: rgba(255,255,255,0.07);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 14px;
-            padding: 28px 24px;
-            display: flex;
-            gap: 18px;
-            align-items: flex-start;
-            transition: background 0.2s, transform 0.2s;
-        }
-
-        .topic-card:hover {
-            background: rgba(255,255,255,0.11);
-            transform: translateY(-2px);
-        }
-
-        .topic-num {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: var(--accent);
-            color: var(--dark);
-            font-weight: 700;
-            font-size: 0.85rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .topic-text {
-            font-size: 0.95rem;
-            line-height: 1.65;
-            color: rgba(255,255,255,0.88);
-        }
-
-        /* ── ABOUT ── */
-        .about-section {
-            background: var(--white);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 70px;
-            align-items: center;
-        }
-
-        .about-content .section-divider {
-            margin: 0 0 20px 0;
-        }
-
-        .about-content p {
-            font-size: 1.02rem;
-            color: var(--text);
-            margin-bottom: 16px;
-            line-height: 1.8;
-        }
-
-        .about-content strong {
-            color: var(--primary);
-        }
-
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-top: 36px;
-        }
-
-        .stat-box {
-            background: var(--soft);
-            border: 1px solid var(--divider);
-            border-radius: 12px;
-            padding: 20px 12px;
-            text-align: center;
-        }
-
-        .stat-num {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 0.78rem;
-            color: var(--muted);
-            margin-top: 6px;
-            font-weight: 500;
-        }
-
-        .about-card {
-            background: linear-gradient(145deg, var(--primary) 0%, var(--primary-mid) 100%);
-            border-radius: 20px;
-            padding: 44px 36px;
-            color: var(--white);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-card::before {
-            content: '';
-            position: absolute;
-            top: -40%;
-            right: -30%;
-            width: 250px;
-            height: 250px;
-            background: radial-gradient(circle, rgba(212, 168, 83, 0.15) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .about-card-inner {
-            position: relative;
-            z-index: 1;
-        }
-
-        .about-card .author-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 6px;
-            font-weight: 700;
-        }
-
-        .about-card .author-role {
-            font-size: 0.82rem;
-            opacity: 0.7;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 28px;
-        }
-
-        .about-card blockquote {
-            font-size: 0.95rem;
-            line-height: 1.8;
-            font-style: italic;
-            opacity: 0.9;
-            text-align: left;
-            border-left: 3px solid var(--accent);
-            padding-left: 18px;
-        }
-
-        /* ── TESTIMONIALS ── */
-        .testimonials-section {
-            background: var(--soft);
-        }
-
-        .test-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 28px;
-        }
-
-        .test-card {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 32px 28px;
-            border: 1px solid var(--divider);
-            transition: transform 0.25s, box-shadow 0.25s;
-        }
-
-        .test-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 48px rgba(27, 67, 50, 0.09);
-        }
-
-        .test-stars {
-            color: var(--accent);
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            margin-bottom: 16px;
-        }
-
-        .test-text {
-            font-size: 0.95rem;
-            color: var(--text);
-            line-height: 1.75;
-            margin-bottom: 22px;
-            font-style: italic;
-        }
-
-        .test-author {
-            font-weight: 700;
-            font-size: 0.9rem;
-            color: var(--dark);
-        }
-
-        .test-role {
-            font-size: 0.8rem;
-            color: var(--muted);
-            margin-top: 3px;
-        }
-
-        /* ── PRICE ── */
-        .price-section {
-            background: var(--white);
-        }
-
-        .price-card {
-            max-width: 520px;
-            margin: 0 auto;
-            background: var(--light);
-            border: 2px solid var(--primary);
-            border-radius: 24px;
-            padding: 52px 44px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .price-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-        }
-
-        .price-label {
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--primary-light);
-            margin-bottom: 12px;
-        }
-
-        .price-amount {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            font-weight: 700;
-            color: var(--primary);
-            line-height: 1;
-            margin-bottom: 6px;
-        }
-
-        .price-note {
-            font-size: 0.88rem;
-            color: var(--muted);
-            margin-bottom: 36px;
-        }
-
-        .price-features {
-            list-style: none;
-            text-align: left;
-            margin-bottom: 36px;
-        }
-
-        .price-features li {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            padding: 11px 0;
-            border-bottom: 1px solid var(--divider);
-            font-size: 0.95rem;
-            color: var(--text);
-        }
-
-        .price-features li:last-child {
-            border-bottom: none;
-        }
-
-        .price-features .check {
-            color: var(--primary-light);
-            font-weight: 700;
-            font-size: 1.1rem;
-            flex-shrink: 0;
-            margin-top: 1px;
-        }
-
-        .price-cta {
-            display: block;
-            background: var(--primary);
-            color: var(--white);
-            font-weight: 700;
-            font-size: 1.05rem;
-            padding: 18px 32px;
-            border-radius: 100px;
-            transition: all 0.25s ease;
-            margin-bottom: 14px;
-        }
-
-        .price-cta:hover {
-            background: var(--primary-mid);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(27, 67, 50, 0.25);
-        }
-
-        .price-contact {
-            font-size: 0.82rem;
-            color: var(--muted);
-        }
-
-        /* ── FAQ ── */
-        .faq-section {
-            background: var(--soft);
-        }
-
-        .faq-list {
-            max-width: 720px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 26px 30px;
-            margin-bottom: 14px;
-            border: 1px solid var(--divider);
-            transition: box-shadow 0.2s;
-        }
-
-        .faq-item:hover {
-            box-shadow: 0 4px 20px rgba(27, 67, 50, 0.06);
-        }
-
-        .faq-item h4 {
-            font-size: 1rem;
-            font-family: 'Source Sans 3', sans-serif;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 10px;
-        }
-
-        .faq-item p {
-            font-size: 0.92rem;
-            color: var(--muted);
-            line-height: 1.75;
-        }
-
-        /* ── FINAL CTA ── */
-        .final-cta {
-            background: linear-gradient(150deg, var(--primary-dark, #0F2D1F) 0%, var(--primary) 60%, var(--primary-mid) 100%);
-            color: var(--white);
-            padding: 100px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .final-cta::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(ellipse at 50% 0%, rgba(212, 168, 83, 0.12) 0%, transparent 60%);
-        }
-
-        .final-cta-inner {
-            position: relative;
-            z-index: 1;
-            max-width: 620px;
-            margin: 0 auto;
-        }
-
-        .final-cta h2 {
-            font-size: clamp(1.7rem, 3.5vw, 2.4rem);
-            color: var(--white);
-            margin-bottom: 18px;
-        }
-
-        .final-cta p {
-            font-size: 1.05rem;
-            color: rgba(255,255,255,0.72);
-            margin-bottom: 38px;
-            line-height: 1.75;
-        }
-
-        /* ── FOOTER ── */
-        footer {
-            background: var(--dark);
-            color: rgba(255,255,255,0.45);
-            padding: 36px 0;
-            text-align: center;
-            font-size: 0.85rem;
-        }
-
-        footer p { margin-bottom: 6px; }
-        footer a { color: rgba(255,255,255,0.6); }
-
-        /* ── WHATSAPP FLOAT ── */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 28px;
-            right: 28px;
-            z-index: 998;
-            background: #25D366;
-            color: white;
-            font-weight: 700;
-            font-size: 0.88rem;
-            padding: 14px 22px;
-            border-radius: 100px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
-            transition: all 0.25s ease;
-        }
-
-        .whatsapp-float:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 32px rgba(37, 211, 102, 0.5);
-        }
-
-        /* ── RESPONSIVE ── */
-        @media (max-width: 860px) {
-            .about-grid { grid-template-columns: 1fr; gap: 40px; }
-            .about-card { order: -1; }
-        }
-
-        @media (max-width: 640px) {
-            .section { padding: 70px 0; }
-            .about-stats { grid-template-columns: 1fr; }
-            .hero-meta { gap: 16px; }
-            .price-card { padding: 36px 24px; }
-            .price-amount { font-size: 3.2rem; }
-        }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Palestra para Igrejas | Erick Bianchini Garcia — Restauração Matrimonial</title>
+ <meta name="description" content="Palestra 'Quando o Amor Fala' para casais da sua igreja. Restauração matrimonial com princípios bíblicos. Pregador desde 2001. R$ 750.">
+ 
+ <!-- Open Graph / WhatsApp -->
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://palestras.transformandovidas.net.br/">
+ <meta property="og:title" content="Palestra para Igrejas — Quando o Amor Fala | Erick Bianchini Garcia">
+ <meta property="og:description" content="Restauração matrimonial com princípios bíblicos, histórias reais e ferramentas práticas. Palestrante desde 2001. Convide para sua igreja por R$ 750.">
+ <meta property="og:image" content="https://transformandovidas.net.br/img/og-palestra.jpg">
+ 
+ <!-- Twitter -->
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Palestra para Igrejas — Quando o Amor Fala">
+ <meta name="twitter:description" content="Restauração matrimonial com princípios bíblicos. Palestrante desde 2001.">
+ 
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+ 
+ <style>
+ :root {
+ --primary: #1B4332;
+ --primary-mid: #2D6A4F;
+ --primary-light: #40916C;
+ --accent: #D4A853;
+ --accent-light: #F5E9CB;
+ --dark: #1A1A1A;
+ --text: #3D3D3D;
+ --muted: #6B7280;
+ --light: #FAFAF8;
+ --white: #FFFFFF;
+ --soft: #F3F4F1;
+ --divider: rgba(27, 67, 50, 0.1);
+ }
+
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ html {
+ scroll-behavior: smooth;
+ }
+
+ body {
+ font-family: 'Source Sans 3', -apple-system, sans-serif;
+ color: var(--text);
+ background: var(--light);
+ line-height: 1.7;
+ -webkit-font-smoothing: antialiased;
+ }
+
+ h1, h2, h3, h4 {
+ font-family: 'Playfair Display', Georgia, serif;
+ line-height: 1.25;
+ color: var(--dark);
+ }
+
+ .container {
+ max-width: 1120px;
+ margin: 0 auto;
+ padding: 0 24px;
+ }
+
+ img { max-width: 100%; }
+
+ a { text-decoration: none; }
+
+ /* ── HEADER ── */
+ header {
+ background: var(--white);
+ border-bottom: 1px solid var(--divider);
+ padding: 16px 0;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ }
+
+ header .container {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ }
+
+ .header-logo {
+ font-family: 'Playfair Display', serif;
+ font-size: 1rem;
+ color: var(--primary);
+ letter-spacing: 0.5px;
+ }
+
+ .header-logo span {
+ color: var(--accent);
+ }
+
+ .header-cta {
+ background: var(--primary);
+ color: var(--white);
+ font-size: 0.85rem;
+ font-weight: 600;
+ padding: 10px 22px;
+ border-radius: 100px;
+ transition: background 0.2s, transform 0.2s;
+ }
+
+ .header-cta:hover {
+ background: var(--primary-mid);
+ transform: translateY(-1px);
+ }
+
+ /* ── HERO ── */
+ .hero {
+ background: var(--primary);
+ color: var(--white);
+ padding: 100px 0 110px;
+ position: relative;
+ overflow: hidden;
+ }
+
+ .hero::before {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background: 
+ radial-gradient(ellipse at 20% 50%, rgba(64, 145, 108, 0.35) 0%, transparent 55%),
+ radial-gradient(ellipse at 80% 20%, rgba(212, 168, 83, 0.15) 0%, transparent 45%);
+ pointer-events: none;
+ }
+
+ .hero::after {
+ content: '';
+ position: absolute;
+ bottom: -1px;
+ left: 0;
+ right: 0;
+ height: 60px;
+ background: var(--light);
+ clip-path: ellipse(55% 100% at 50% 100%);
+ }
+
+ .hero-inner {
+ position: relative;
+ z-index: 1;
+ text-align: center;
+ max-width: 760px;
+ margin: 0 auto;
+ }
+
+ .hero-badge {
+ display: inline-block;
+ background: rgba(212, 168, 83, 0.18);
+ border: 1px solid rgba(212, 168, 83, 0.4);
+ color: var(--accent);
+ font-size: 0.72rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 2.5px;
+ padding: 5px 18px;
+ border-radius: 100px;
+ margin-bottom: 28px;
+ }
+
+ .hero h1 {
+ font-size: clamp(2rem, 5vw, 3.1rem);
+ color: var(--white);
+ margin-bottom: 20px;
+ font-weight: 700;
+ }
+
+ .hero h1 em {
+ font-style: normal;
+ color: var(--accent);
+ }
+
+ .hero-sub {
+ font-size: 1.1rem;
+ color: rgba(255,255,255,0.78);
+ max-width: 580px;
+ margin: 0 auto 40px;
+ line-height: 1.75;
+ }
+
+ .hero-actions {
+ display: flex;
+ gap: 16px;
+ justify-content: center;
+ flex-wrap: wrap;
+ }
+
+ .btn-primary {
+ display: inline-flex;
+ align-items: center;
+ gap: 10px;
+ background: var(--accent);
+ color: var(--dark);
+ font-weight: 700;
+ font-size: 1rem;
+ padding: 16px 32px;
+ border-radius: 100px;
+ transition: all 0.25s ease;
+ border: none;
+ cursor: pointer;
+ }
+
+ .btn-primary:hover {
+ background: #e0b460;
+ transform: translateY(-2px);
+ box-shadow: 0 10px 30px rgba(212, 168, 83, 0.35);
+ }
+
+ .btn-ghost {
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+ background: transparent;
+ color: rgba(255,255,255,0.85);
+ font-weight: 600;
+ font-size: 0.95rem;
+ padding: 14px 28px;
+ border-radius: 100px;
+ border: 1.5px solid rgba(255,255,255,0.3);
+ transition: all 0.25s ease;
+ }
+
+ .btn-ghost:hover {
+ background: rgba(255,255,255,0.1);
+ border-color: rgba(255,255,255,0.5);
+ }
+
+ /* ── HERO META — sempre em linha ── */
+ .hero-meta {
+ margin-top: 36px;
+ display: flex;
+ gap: 32px;
+ justify-content: center;
+ flex-wrap: nowrap; /* força linha única */
+ align-items: center;
+ }
+
+ .hero-meta-item {
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ font-size: 0.88rem;
+ color: rgba(255,255,255,0.65);
+ white-space: nowrap; /* impede quebra interna */
+ }
+
+ .hero-meta-item .icon {
+ width: 18px;
+ height: 18px;
+ opacity: 0.7;
+ flex-shrink: 0;
+ }
+
+ /* separador visual entre os itens */
+ .hero-meta-item + .hero-meta-item {
+ border-left: 1px solid rgba(255,255,255,0.2);
+ padding-left: 32px;
+ }
+
+ /* ── DIVIDER ── */
+ .section-divider {
+ width: 48px;
+ height: 3px;
+ background: var(--accent);
+ border-radius: 2px;
+ margin: 0 auto 20px;
+ }
+
+ /* ── PROBLEM ── */
+ .section {
+ padding: 90px 0;
+ }
+
+ .section-header {
+ text-align: center;
+ max-width: 640px;
+ margin: 0 auto 60px;
+ }
+
+ .section-label {
+ font-size: 0.75rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ color: var(--primary-light);
+ margin-bottom: 14px;
+ }
+
+ .section-title {
+ font-size: clamp(1.6rem, 3vw, 2.2rem);
+ margin-bottom: 16px;
+ }
+
+ .section-desc {
+ font-size: 1.05rem;
+ color: var(--muted);
+ }
+
+ .problem-section {
+ background: var(--white);
+ }
+
+ .problem-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+ gap: 24px;
+ }
+
+ .problem-card {
+ background: var(--soft);
+ border-radius: 16px;
+ padding: 32px 28px;
+ border: 1px solid var(--divider);
+ transition: transform 0.25s ease, box-shadow 0.25s ease;
+ position: relative;
+ overflow: hidden;
+ }
+
+ .problem-card::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 4px;
+ height: 100%;
+ background: var(--accent);
+ opacity: 0;
+ transition: opacity 0.25s;
+ }
+
+ .problem-card:hover {
+ transform: translateY(-4px);
+ box-shadow: 0 12px 40px rgba(27, 67, 50, 0.08);
+ }
+
+ .problem-card:hover::before {
+ opacity: 1;
+ }
+
+ .problem-card .icon {
+ font-size: 1.8rem;
+ margin-bottom: 16px;
+ display: block;
+ }
+
+ .problem-card h4 {
+ font-size: 1.05rem;
+ margin-bottom: 10px;
+ font-family: 'Source Sans 3', sans-serif;
+ font-weight: 700;
+ }
+
+ .problem-card p {
+ font-size: 0.92rem;
+ color: var(--muted);
+ line-height: 1.7;
+ }
+
+ /* ── SOLUTION ── */
+ .solution-section {
+ background: var(--primary);
+ color: var(--white);
+ }
+
+ .solution-section .section-title {
+ color: var(--white);
+ }
+
+ .solution-section .section-desc {
+ color: rgba(255,255,255,0.65);
+ }
+
+ .solution-section .section-label {
+ color: var(--accent);
+ }
+
+ .solution-section .section-divider {
+ background: rgba(212, 168, 83, 0.6);
+ }
+
+ .topics-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 20px;
+ }
+
+ .topic-card {
+ background: rgba(255,255,255,0.07);
+ border: 1px solid rgba(255,255,255,0.1);
+ border-radius: 14px;
+ padding: 28px 24px;
+ display: flex;
+ gap: 18px;
+ align-items: flex-start;
+ transition: background 0.2s, transform 0.2s;
+ }
+
+ .topic-card:hover {
+ background: rgba(255,255,255,0.11);
+ transform: translateY(-2px);
+ }
+
+ .topic-num {
+ width: 36px;
+ height: 36px;
+ border-radius: 50%;
+ background: var(--accent);
+ color: var(--dark);
+ font-weight: 700;
+ font-size: 0.85rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-shrink: 0;
+ }
+
+ .topic-text {
+ font-size: 0.95rem;
+ line-height: 1.65;
+ color: rgba(255,255,255,0.88);
+ }
+
+ /* ── ABOUT ── */
+ .about-section {
+ background: var(--white);
+ }
+
+ .about-grid {
+ display: grid;
+ grid-template-columns: 1.1fr 0.9fr;
+ gap: 70px;
+ align-items: center;
+ }
+
+ .about-content .section-divider {
+ margin: 0 0 20px 0;
+ }
+
+ .about-content p {
+ font-size: 1.02rem;
+ color: var(--text);
+ margin-bottom: 16px;
+ line-height: 1.8;
+ }
+
+ .about-content strong {
+ color: var(--primary);
+ }
+
+ .about-stats {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 16px;
+ margin-top: 36px;
+ }
+
+ .stat-box {
+ background: var(--soft);
+ border: 1px solid var(--divider);
+ border-radius: 12px;
+ padding: 20px 12px;
+ text-align: center;
+ }
+
+ .stat-num {
+ font-family: 'Playfair Display', serif;
+ font-size: 2rem;
+ font-weight: 700;
+ color: var(--primary);
+ line-height: 1;
+ }
+
+ .stat-label {
+ font-size: 0.78rem;
+ color: var(--muted);
+ margin-top: 6px;
+ font-weight: 500;
+ }
+
+ .about-card {
+ background: linear-gradient(145deg, var(--primary) 0%, var(--primary-mid) 100%);
+ border-radius: 20px;
+ padding: 44px 36px;
+ color: var(--white);
+ text-align: center;
+ position: relative;
+ overflow: hidden;
+ }
+
+ .about-card::before {
+ content: '';
+ position: absolute;
+ top: -40%;
+ right: -30%;
+ width: 250px;
+ height: 250px;
+ background: radial-gradient(circle, rgba(212, 168, 83, 0.15) 0%, transparent 70%);
+ border-radius: 50%;
+ }
+
+ .about-card-inner {
+ position: relative;
+ z-index: 1;
+ }
+
+ .about-card .author-name {
+ font-family: 'Playfair Display', serif;
+ font-size: 1.5rem;
+ margin-bottom: 6px;
+ font-weight: 700;
+ }
+
+ .about-card .author-role {
+ font-size: 0.82rem;
+ opacity: 0.7;
+ text-transform: uppercase;
+ letter-spacing: 1.5px;
+ margin-bottom: 28px;
+ }
+
+ .about-card blockquote {
+ font-size: 0.95rem;
+ line-height: 1.8;
+ font-style: italic;
+ opacity: 0.9;
+ text-align: left;
+ border-left: 3px solid var(--accent);
+ padding-left: 18px;
+ }
+
+ /* ── TESTIMONIALS ── */
+ .testimonials-section {
+ background: var(--soft);
+ }
+
+ .test-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 28px;
+ }
+
+ .test-card {
+ background: var(--white);
+ border-radius: 16px;
+ padding: 32px 28px;
+ border: 1px solid var(--divider);
+ transition: transform 0.25s, box-shadow 0.25s;
+ }
+
+ .test-card:hover {
+ transform: translateY(-4px);
+ box-shadow: 0 16px 48px rgba(27, 67, 50, 0.09);
+ }
+
+ .test-stars {
+ color: var(--accent);
+ font-size: 0.9rem;
+ letter-spacing: 2px;
+ margin-bottom: 16px;
+ }
+
+ .test-text {
+ font-size: 0.95rem;
+ color: var(--text);
+ line-height: 1.75;
+ margin-bottom: 22px;
+ font-style: italic;
+ }
+
+ .test-author {
+ font-weight: 700;
+ font-size: 0.9rem;
+ color: var(--dark);
+ }
+
+ .test-role {
+ font-size: 0.8rem;
+ color: var(--muted);
+ margin-top: 3px;
+ }
+
+ /* ── PRICE ── */
+ .price-section {
+ background: var(--white);
+ }
+
+ .price-card {
+ max-width: 520px;
+ margin: 0 auto;
+ background: var(--light);
+ border: 2px solid var(--primary);
+ border-radius: 24px;
+ padding: 52px 44px;
+ text-align: center;
+ position: relative;
+ overflow: hidden;
+ }
+
+ .price-card::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ height: 5px;
+ background: linear-gradient(90deg, var(--primary), var(--accent));
+ }
+
+ .price-label {
+ font-size: 0.75rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ color: var(--primary-light);
+ margin-bottom: 12px;
+ }
+
+ .price-amount {
+ font-family: 'Playfair Display', serif;
+ font-size: 4rem;
+ font-weight: 700;
+ color: var(--primary);
+ line-height: 1;
+ margin-bottom: 6px;
+ }
+
+ .price-note {
+ font-size: 0.88rem;
+ color: var(--muted);
+ margin-bottom: 36px;
+ }
+
+ .price-features {
+ list-style: none;
+ text-align: left;
+ margin-bottom: 36px;
+ }
+
+ .price-features li {
+ display: flex;
+ align-items: flex-start;
+ gap: 12px;
+ padding: 11px 0;
+ border-bottom: 1px solid var(--divider);
+ font-size: 0.95rem;
+ color: var(--text);
+ }
+
+ .price-features li:last-child {
+ border-bottom: none;
+ }
+
+ .price-features .check {
+ color: var(--primary-light);
+ font-weight: 700;
+ font-size: 1.1rem;
+ flex-shrink: 0;
+ margin-top: 1px;
+ }
+
+ .price-cta {
+ display: block;
+ background: var(--primary);
+ color: var(--white);
+ font-weight: 700;
+ font-size: 1.05rem;
+ padding: 18px 32px;
+ border-radius: 100px;
+ transition: all 0.25s ease;
+ margin-bottom: 14px;
+ }
+
+ .price-cta:hover {
+ background: var(--primary-mid);
+ transform: translateY(-2px);
+ box-shadow: 0 10px 30px rgba(27, 67, 50, 0.25);
+ }
+
+ .price-contact {
+ font-size: 0.82rem;
+ color: var(--muted);
+ }
+
+ /* ── FAQ ── */
+ .faq-section {
+ background: var(--soft);
+ }
+
+ .faq-list {
+ max-width: 720px;
+ margin: 0 auto;
+ }
+
+ .faq-item {
+ background: var(--white);
+ border-radius: 12px;
+ padding: 26px 30px;
+ margin-bottom: 14px;
+ border: 1px solid var(--divider);
+ transition: box-shadow 0.2s;
+ }
+
+ .faq-item:hover {
+ box-shadow: 0 4px 20px rgba(27, 67, 50, 0.06);
+ }
+
+ .faq-item h4 {
+ font-size: 1rem;
+ font-family: 'Source Sans 3', sans-serif;
+ font-weight: 700;
+ color: var(--dark);
+ margin-bottom: 10px;
+ }
+
+ .faq-item p {
+ font-size: 0.92rem;
+ color: var(--muted);
+ line-height: 1.75;
+ }
+
+ /* ── FINAL CTA ── */
+ .final-cta {
+ background: linear-gradient(150deg, var(--primary-dark, #0F2D1F) 0%, var(--primary) 60%, var(--primary-mid) 100%);
+ color: var(--white);
+ padding: 100px 0;
+ text-align: center;
+ position: relative;
+ overflow: hidden;
+ }
+
+ .final-cta::before {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background: radial-gradient(ellipse at 50% 0%, rgba(212, 168, 83, 0.12) 0%, transparent 60%);
+ }
+
+ .final-cta-inner {
+ position: relative;
+ z-index: 1;
+ max-width: 620px;
+ margin: 0 auto;
+ }
+
+ .final-cta h2 {
+ font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+ color: var(--white);
+ margin-bottom: 18px;
+ }
+
+ .final-cta p {
+ font-size: 1.05rem;
+ color: rgba(255,255,255,0.72);
+ margin-bottom: 38px;
+ line-height: 1.75;
+ }
+
+ /* ── FOOTER ── */
+ footer {
+ background: var(--dark);
+ color: rgba(255,255,255,0.45);
+ padding: 36px 0;
+ text-align: center;
+ font-size: 0.85rem;
+ }
+
+ footer p { margin-bottom: 6px; }
+ footer a { color: rgba(255,255,255,0.6); }
+
+ /* ── WHATSAPP FLOAT ── */
+ .whatsapp-float {
+ position: fixed;
+ bottom: 28px;
+ right: 28px;
+ z-index: 998;
+ background: #25D366;
+ color: white;
+ font-weight: 700;
+ font-size: 0.88rem;
+ padding: 14px 22px;
+ border-radius: 100px;
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ text-decoration: none;
+ box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
+ transition: all 0.25s ease;
+ }
+
+ .whatsapp-float:hover {
+ transform: translateY(-4px);
+ box-shadow: 0 10px 32px rgba(37, 211, 102, 0.5);
+ }
+
+ /* ── RESPONSIVE ── */
+ @media (max-width: 860px) {
+ .about-grid { grid-template-columns: 1fr; gap: 40px; }
+ .about-card { order: -1; }
+ }
+
+ @media (max-width: 640px) {
+ .section { padding: 70px 0; }
+ .about-stats { grid-template-columns: 1fr; }
+ /* em telas muito pequenas, reduz o gap e a fonte dos meta-items */
+ .hero-meta { gap: 0; }
+ .hero-meta-item { font-size: 0.78rem; gap: 5px; }
+ .hero-meta-item + .hero-meta-item { padding-left: 16px; }
+ .price-card { padding: 36px 24px; }
+ .price-amount { font-size: 3.2rem; }
+ }
+ </style>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="container">
-            <div class="header-logo">Transformando Vidas <span>·</span> Erick Bianchini Garcia</div>
-            <a href="https://wa.me/5518997130824?text=Olá%20Erick!%20Gostaria%20de%20saber%20mais%20sobre%20a%20palestra%20para%20nossa%20igreja." class="header-cta" target="_blank">
-                Contratar Palestra
-            </a>
-        </div>
-    </header>
+ <!-- HEADER -->
+ <header>
+ <div class="container">
+ <div class="header-logo">Transformando Vidas <span>·</span> Erick Bianchini Garcia</div>
+ <a href="https://wa.me/5518997130824?text=Olá%20Erick!%20Gostaria%20de%20saber%20mais%20sobre%20a%20palestra%20para%20nossa%20igreja." class="header-cta" target="_blank">
+ Contratar Palestra
+ </a>
+ </div>
+ </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-inner">
-                <div class="hero-badge">Para Igrejas e Comunidades Cristãs</div>
-                <h1>Uma <em>Palestra</em> Que Pode Transformar os Casamentos da Sua Igreja</h1>
-                <p class="hero-sub">
-                    "Quando o Amor Fala" — restauração matrimonial com princípios bíblicos, histórias reais de casais que escolheram não desistir e ferramentas práticas para aplicá-las já.
-                </p>
-                <div class="hero-actions">
-                    <a href="https://wa.me/5518997130824?text=Olá%20Erick!%20Vi%20a%20landing%20page%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20palestra%20para%20nossa%20igreja." class="btn-primary" target="_blank">
-                        Quero Convidar para Nossa Igreja
-                    </a>
-                    <a href="#problema" class="btn-ghost">
-                        Saiba Mais
-                    </a>
-                </div>
-                <div class="hero-meta">
-                    <div class="hero-meta-item">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-                        Palestra de 2 horas
-                    </div>
-                    <div class="hero-meta-item">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                        Para casais de toda fase
-                    </div>
-                    <div class="hero-meta-item">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        Todo o Brasil
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+ <!-- HERO -->
+ <section class="hero">
+ <div class="container">
+ <div class="hero-inner">
+ <div class="hero-badge">Para Igrejas e Comunidades Cristãs</div>
+ <h1>Uma <em>Palestra</em> Que Pode Transformar os Casamentos da Sua Igreja</h1>
+ <p class="hero-sub">
+ "Quando o Amor Fala" — restauração matrimonial com princípios bíblicos, histórias reais de casais que escolheram não desistir e ferramentas práticas para aplicá-las já.
+ </p>
+ <div class="hero-actions">
+ <a href="https://wa.me/5518997130824?text=Olá%20Erick!%20Vi%20a%20landing%20page%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20palestra%20para%20nossa%20igreja." class="btn-primary" target="_blank">
+ Quero Convidar para Nossa Igreja
+ </a>
+ <a href="#problema" class="btn-ghost">
+ Saiba Mais
+ </a>
+ </div>
+ <div class="hero-meta">
+ <div class="hero-meta-item">
+ <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+ Palestra de 2 horas
+ </div>
+ <div class="hero-meta-item">
+ <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+ Para casais de toda fase
+ </div>
+ <div class="hero-meta-item">
+ <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+ Todo o Brasil
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- PROBLEM -->
-    <section class="section problem-section" id="problema">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-divider"></div>
-                <div class="section-label">O Problema</div>
-                <h2 class="section-title">O Problema Que Sua Igreja Provavelmente Enfrenta</h2>
-                <p class="section-desc">Casais em crise não aparecem na porta do pastor. Eles sofrem em silêncio — até pararem de aparecer.</p>
-            </div>
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <span class="icon">😶</span>
-                    <h4>Casais em Silêncio</h4>
-                    <p>Dividem o mesmo teto, mas vivem como estranhos. A distância emocional cresce em silêncio enquanto a igreja não percebe.</p>
-                </div>
-                <div class="problem-card">
-                    <span class="icon">🛠️</span>
-                    <h4>Pastores Sobrecarregados</h4>
-                    <p>Cuidam da alma da igreja, mas não têm uma ferramenta prática e estruturada pra ajudar casais em crise real.</p>
-                </div>
-                <div class="problem-card">
-                    <span class="icon">🚪</span>
-                    <h4>Membros se Afastando</h4>
-                    <p>Crises conjugais levam ao afastamento da igreja, da comunidade e, muitas vezes, da fé. O problema se alastra.</p>
-                </div>
-                <div class="problem-card">
-                    <span class="icon">🤐</span>
-                    <h4>A Dor é Tabu</h4>
-                    <p>Ninguém quer admitir que está passando. A vergonha silencia casais que poderiam ser alcançados com a ajuda certa.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ <!-- PROBLEM -->
+ <section class="section problem-section" id="problema">
+ <div class="container">
+ <div class="section-header">
+ <div class="section-divider"></div>
+ <div class="section-label">O Problema</div>
+ <h2 class="section-title">O Problema Que Sua Igreja Provavelmente Enfrenta</h2>
+ <p class="section-desc">Casais em crise não aparecem na porta do pastor. Eles sofrem em silêncio — até pararem de aparecer.</p>
+ </div>
+ <div class="problem-grid">
+ <div class="problem-card">
+ <span class="icon">😶</span>
+ <h4>Casais em Silêncio</h4>
+ <p>Dividem o mesmo teto, mas vivem como estranhos. A distância emocional cresce em silêncio enquanto a igreja não percebe.</p>
+ </div>
+ <div class="problem-card">
+ <span class="icon">🛠️</span>
+ <h4>Pastores Sobrecarregados</h4>
+ <p>Cuidam da alma da igreja, mas não têm uma ferramenta prática e estruturada para ajudar casais em crise real.</p>
+ </div>
+ <div class="problem-card">
+ <span class="icon">🚪</span>
+ <h4>Membros se Afastando</h4>
+ <p>Crises conjugais levam ao afastamento da igreja, da comunidade e, muitas vezes, da fé. O problema se alastra.</p>
+ </div>
+ <div class="problem-card">
+ <span class="icon">🤐</span>
+ <h4>A Dor é Tabu</h4>
+ <p>Ninguém quer admitir que está passando por isso. A vergonha silencia casais que poderiam ser alcançados com a ajuda certa.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- SOLUTION -->
-    <section class="section solution-section" id="solucao">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-divider"></div>
-                <div class="section-label">A Solução</div>
-                <h2 class="section-title">O Que a Palestra Proporciona</h2>
-                <p class="section-desc">Seis pilares bíblicos que tocam o coração e oferecem um caminho real de restauração.</p>
-            </div>
-            <div class="topics-grid">
-                <div class="topic-card">
-                    <div class="topic-num">1</div>
-                    <div class="topic-text">Fé que sustenta no vale mais profundo — quando tudo ao redor diz que não tem mais jeito</div>
-                </div>
-                <div class="topic-card">
-                    <div class="topic-num">2</div>
-                    <div class="topic-text">Perdão como caminho de libertação real — não como fraqueza, mas como escolha poderosa</div>
-                </div>
-                <div class="topic-card">
-                    <div class="topic-num">3</div>
-                    <div class="topic-text">Persistência que fortalece — quando tudo ao redor convida a desistir, você escolhe ficar</div>
-                </div>
-                <div class="topic-card">
-                    <div class="topic-num">4</div>
-                    <div class="topic-text">Compromisso que permanece — quando as emoções vacilam, a aliança se mantém firme</div>
-                </div>
-                <div class="topic-card">
-                    <div class="topic-num">5</div>
-                    <div class="topic-text">Comunicação que reconecta — o poder da escuta ativa para alcançar o coração do outro</div>
-                </div>
-                <div class="topic-card">
-                    <div class="topic-num">6</div>
-                    <div class="topic-text">Encorajamento que devolve forças — palavras certas no momento certo transformam casais</div>
-                </div>
-            </div>
-        </div>
-    </section>
+ <!-- SOLUTION -->
+ <section class="section solution-section" id="solucao">
+ <div class="container">
+ <div class="section-header">
+ <div class="section-divider"></div>
+ <div class="section-label">A Solução</div>
+ <h2 class="section-title">O Que a Palestra Proporciona</h2>
+ <p class="section-desc">Seis pilares bíblicos que tocam o coração e oferecem um caminho real de restauração.</p>
+ </div>
+ <div class="topics-grid">
+ <div class="topic-card">
+ <div class="topic-num">1</div>
+ <div class="topic-text">Fé que sustenta no vale mais profundo — quando tudo ao redor diz que não tem mais jeito</div>
+ </div>
+ <div class="topic-card">
+ <div class="topic-num">2</div>
+ <div class="topic-text">Perdão como caminho de libertação real — não como fraqueza, mas como escolha poderosa</div>
+ </div>
+ <div class="topic-card">
+ <div class="topic-num">3</div>
+ <div class="topic-text">Persistência que fortalece — quando tudo ao redor convida a desistir, você escolhe ficar</div>
+ </div>
+ <div class="topic-card">
+ <div class="topic-num">4</div>
+ <div class="topic-text">Compromisso que permanece — quando as emoções vacilam, a aliança se mantém firme</div>
+ </div>
+ <div class="topic-card">
+ <div class="topic-num">5</div>
+ <div class="topic-text">Comunicação que reconecta — o poder da escuta ativa para alcançar o coração do outro</div>
+ </div>
+ <div class="topic-card">
+ <div class="topic-num">6</div>
+ <div class="topic-text">Encorajamento que devolve forças — palavras certas no momento certo transformam casais</div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- ABOUT -->
-    <section class="section about-section" id="sobre">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <div class="section-divider"></div>
-                    <div class="section-label">O Palestrante</div>
-                    <h2 class="section-title">Quem Está no Palco</h2>
-                    <p>
-                        <strong>Erick Bianchini Garcia</strong> é pregador do evangelho e palestrante cristão desde 2001, com mais de duas décadas de caminhada ministerial dedicadas ao cuidado de pessoas e famílias.
-                    </p>
-                    <p>
-                        Autor do livro <strong>"Quando o Amor Fala"</strong>, já impactou milhares de casais com uma mensagem de restauração, fé e esperança — mostrando que todo casamento pode ser restaurado quando Cristo ocupa o centro.
-                    </p>
-                    <p>
-                        Casado há 8 anos com Adriana Araújo de Oliveira, vive na prática os princípios que ensina. Sua história conjugal é parte viva da mensagem que entrega.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-box">
-                            <div class="stat-num">24+</div>
-                            <div class="stat-label">Anos de Ministério</div>
-                        </div>
-                        <div class="stat-box">
-                            <div class="stat-num">2.400+</div>
-                            <div class="stat-label">Casais Impactados</div>
-                        </div>
-                        <div class="stat-box">
-                            <div class="stat-num">8</div>
-                            <div class="stat-label">Anos de Casamento</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-card">
-                    <div class="about-card-inner">
-                        <div class="author-name">Erick Bianchini Garcia</div>
-                        <div class="author-role">Palestrante · Pregador · Autor</div>
-                        <blockquote>
-                            "O amor não foi embora. Ele pode estar ferido, confuso, distante — mas pode ser restaurado. A especialidade de Deus é restaurar o que foi quebrado."
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+ <!-- ABOUT -->
+ <section class="section about-section" id="sobre">
+ <div class="container">
+ <div class="about-grid">
+ <div class="about-content">
+ <div class="section-divider"></div>
+ <div class="section-label">O Palestrante</div>
+ <h2 class="section-title">Quem Está no Palco</h2>
+ <p>
+ <strong>Erick Bianchini Garcia</strong> é pregador do evangelho e palestrante cristão desde 2001, com mais de duas décadas de caminhada ministerial dedicadas ao cuidado de pessoas e famílias.
+ </p>
+ <p>
+ Autor do livro <strong>"Quando o Amor Fala"</strong>, já impactou milhares de casais com uma mensagem de restauração, fé e esperança — mostrando que todo casamento pode ser restaurado quando Cristo ocupa o centro.
+ </p>
+ <p>
+ Casado há 8 anos com Adriana Araújo de Oliveira, vive na prática os princípios que ensina. Sua história conjugal é parte viva da mensagem que entrega.
+ </p>
+ <div class="about-stats">
+ <div class="stat-box">
+ <div class="stat-num">24+</div>
+ <div class="stat-label">Anos de Ministério</div>
+ </div>
+ <div class="stat-box">
+ <div class="stat-num">2.400+</div>
+ <div class="stat-label">Casais Impactados</div>
+ </div>
+ <div class="stat-box">
+ <div class="stat-num">8</div>
+ <div class="stat-label">Anos de Casamento</div>
+ </div>
+ </div>
+ </div>
+ <div class="about-card">
+ <div class="about-card-inner">
+ <div class="author-name">Erick Bianchini Garcia</div>
+ <div class="author-role">Palestrante · Pregador · Autor</div>
+ <blockquote>
+ "O amor não foi embora. Ele pode estar ferido, confuso, distante — mas pode ser restaurado. A especialidade de Deus é restaurar o que foi quebrado."
+ </blockquote>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="section testimonials-section" id="depoimentos">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-divider"></div>
-                <div class="section-label">Depoimentos</div>
-                <h2 class="section-title">O Que Dizem Quem Conheceu o Trabalho</h2>
-            </div>
-            <div class="test-grid">
-                <div class="test-card">
-                    <div class="test-stars">★★★★★</div>
-                    <p class="test-text">"Tivemos um Retiro de Casais e o Erick trouxe uma mensagem que tocou profundamente os corações. Casais que não conversavam há meses voltaram a dialoghar. O resultado foi real e visível."</p>
-                    <div class="test-author">Pr. Ricardo Mendes</div>
-                    <div class="test-role">Igreja Batista em Presidente Prudente</div>
-                </div>
-                <div class="test-card">
-                    <div class="test-stars">★★★★★</div>
-                    <p class="test-text">"Ela veio sem vontade, achando que seria mais uma palestra sem profundidade. Saiu transformada. Voltou pra casa com outro olhar sobre o casamento. A mensagem dele é real e toca fundo."</p>
-                    <div class="test-author">Carlos e Fernanda</div>
-                    <div class="test-role">Casal da Igreja em São Paulo</div>
-                </div>
-                <div class="test-card">
-                    <div class="test-stars">★★★★★</div>
-                    <p class="test-text">"Organizamos a palestra em duas semanas, sem planejamento grande. O Erick se adaptou ao nosso tempo e à nossa realidade. Superou todas as expectativas do começo ao fim."</p>
-                    <div class="test-author">Líder de Jovens</div>
-                    <div class="test-role">Comunidade Evangélica em Rondônia</div>
-                </div>
-            </div>
-        </div>
-    </section>
+ <!-- TESTIMONIALS -->
+ <section class="section testimonials-section" id="depoimentos">
+ <div class="container">
+ <div class="section-header">
+ <div class="section-divider"></div>
+ <div class="section-label">Depoimentos</div>
+ <h2 class="section-title">O Que Dizem Quem Conheceu o Trabalho</h2>
+ </div>
+ <div class="test-grid">
+ <div class="test-card">
+ <div class="test-stars">★★★★★</div>
+ <p class="test-text">"Tivemos um Retiro de Casais e o Erick trouxe uma mensagem que tocou profundamente os corações. Casais que não conversavam há meses voltaram a dialogar. O resultado foi real e visível."</p>
+ <div class="test-author">Pr. Ricardo Mendes</div>
+ <div class="test-role">Igreja Batista em Presidente Prudente</div>
+ </div>
+ <div class="test-card">
+ <div class="test-stars">★★★★★</div>
+ <p class="test-text">"Ela veio sem vontade, achando que seria mais uma palestra sem profundidade. Saiu transformada. Voltou para casa com outro olhar sobre o casamento. A mensagem dele é real e toca fundo."</p>
+ <div class="test-author">Carlos e Fernanda</div>
+ <div class="test-role">Casal da Igreja em São Paulo</div>
+ </div>
+ <div class="test-card">
+ <div class="test-stars">★★★★★</div>
+ <p class="test-text">"Organizamos a palestra em duas semanas, sem planejamento grande. O Erick se adaptou ao nosso tempo e à nossa realidade. Superou todas as expectativas do começo ao fim."</p>
+ <div class="test-author">Líder de Jovens</div>
+ <div class="test-role">Comunidade Evangélica em Rondônia</div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- PRICE -->
-    <section class="section price-section" id="preco">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-divider"></div>
-                <div class="section-label">Investimento</div>
-                <h2 class="section-title">Quanto Custa Ter Essa Palestra na Sua Igreja</h2>
-                <p class="section-desc">Preço fixo. Sem surpresas. Sem mensalidades. O valor de uma boa tarde com Deus.</p>
-            </div>
-            <div class="price-card">
-                <div class="price-label">Palestra Avulsa</div>
-                <div class="price-amount">R$ 750</div>
-                <div class="price-note">para sua igreja ou comunidade</div>
-                <ul class="price-features">
-                    <li>
-                        <span class="check">✓</span>
-                        Palestra completa de até 2 horas
-                    </li>
-                    <li>
-                        <span class="check">✓</span>
-                        Princípios bíblicos com histórias reais
-                    </li>
-                    <li>
-                        <span class="check">✓</span>
-                        Exercícios práticos para casais aplicarem
-                    </li>
-                    <li>
-                        <span class="check">✓</span>
-                        Momento de interação e perguntas
-                    </li>
-                    <li>
-                        <span class="check">✓</span>
-                        Disponível para igrejas em todo o Brasil
-                    </li>
-                    <li>
-                        <span class="check">✓</span>
-                        Formações e retiros sob consulta
-                    </li>
-                </ul>
-                <a href="https://wa.me/5518997130824?text=Olá%20Erick!%20Gostaria%20de%20contratar%20a%20palestra%20para%20nossa%20igreja.%20Qual%20a%20disponibilidade?" class="price-cta" target="_blank">
-                    Agendar para Nossa Igreja
-                </a>
-                <div class="price-contact">📞 Contato direto via WhatsApp — sem intermediários</div>
-            </div>
-        </div>
-    </section>
+ <!-- PRICE -->
+ <section class="section price-section" id="preco">
+ <div class="container">
+ <div class="section-header">
+ <div class="section-divider"></div>
+ <div class="section-label">Investimento</div>
+ <h2 class="section-title">Quanto Custa Ter Essa Palestra na Sua Igreja</h2>
+ <p class="section-desc">Preço fixo. Sem surpresas. Sem mensalidades. O valor de uma boa tarde com Deus.</p>
+ </div>
+ <div class="price-card">
+ <div class="price-label">Palestra Avulsa</div>
+ <div class="price-amount">R$ 750</div>
+ <div class="price-note">para sua igreja ou comunidade</div>
+ <ul class="price-features">
+ <li>
+ <span class="check">✓</span>
+ Palestra completa de até 2 horas
+ </li>
+ <li>
+ <span class="check">✓</span>
+ Princípios bíblicos com histórias reais
+ </li>
+ <li>
+ <span class="check">✓</span>
+ Exercícios práticos para casais aplicarem
+ </li>
+ <li>
+ <span class="check">✓</span>
+ Momento de interação e perguntas
+ </li>
+ <li>
+ <span class="check">✓</span>
+ Disponível para igrejas em todo o Brasil
+ </li>
+ <li>
+ <span class="check">✓</span>
+ Formações e retiros sob consulta
+ </li>
+ </ul>
+ <a href="https://wa.me/5518997130824?text=Olá%20Erick!%20Gostaria%20de%20contratar%20a%20palestra%20para%20nossa%20igreja.%20Qual%20a%20disponibilidade?" class="price-cta" target="_blank">
+ Agendar para Nossa Igreja
+ </a>
+ <div class="price-contact">📞 Contato direto via WhatsApp — sem intermediários</div>
+ </div>
+ </div>
+ </section>
 
-    <!-- FAQ -->
-    <section class="section faq-section" id="faq">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-divider"></div>
-                <div class="section-label">Dúvidas Frequentes</div>
-                <h2 class="section-title">Perguntas Antes de Contratar</h2>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <h4>Em quanto tempo precisamos organizar?</h4>
-                    <p>O ideal é pelo menos 15 dias de antecedência. Mas se o calendário permitir, consigo me adaptar a prazos mais curtos. É só conversar.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Precisa de estrutura especial?</h4>
-                    <p>Apenas um microfone e um projetor. O resto eu levo. Cadeira, mesa e telão — o básico é suficiente. Equipamentos simples não são desculpa pra adiar.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Funciona para casais de quanto tempo de casamento?</h4>
-                    <p>Casamentos jovens, maduros, em crise ou apenas querendo fortalecer. A mensagem serve pros dois extremos — funciona tanto pra quem está acabando quanto pra quem quer aprofundar.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>E se o pastor quiser algo diferente do conteúdo?</h4>
-                    <p>A palestra pode ser adaptada ao tema do evento, ao tempo disponível e à necessidade específica da igreja. Converse antes e a gente alinha.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Posso contratar mais de uma palestra?</h4>
-                    <p>Sim. Palestras avulsas, casais de casais, retiros de fim de semana — há condições especiais para múltiplos encontros. É só preguntar.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ <!-- FAQ -->
+ <section class="section faq-section" id="faq">
+ <div class="container">
+ <div class="section-header">
+ <div class="section-divider"></div>
+ <div class="section-label">Dúvidas Frequentes</div>
+ <h2 class="section-title">Perguntas Antes de Contratar</h2>
+ </div>
+ <div class="faq-list">
+ <div class="faq-item">
+ <h4>Em quanto tempo precisamos organizar?</h4>
+ <p>O ideal é pelo menos 15 dias de antecedência. Mas se o calendário permitir, consigo me adaptar a prazos mais curtos. É só conversar.</p>
+ </div>
+ <div class="faq-item">
+ <h4>Precisa de estrutura especial?</h4>
+ <p>Apenas um microfone e um projetor. O resto eu levo. Cadeira, mesa e telão — o básico é suficiente. Equipamentos simples não são desculpa para adiar.</p>
+ </div>
+ <div class="faq-item">
+ <h4>Funciona para casais de quanto tempo de casamento?</h4>
+ <p>Casamentos jovens, maduros, em crise ou apenas querendo fortalecer. A mensagem serve para os dois extremos — funciona tanto para quem está acabando quanto para quem quer aprofundar.</p>
+ </div>
+ <div class="faq-item">
+ <h4>E se o pastor quiser algo diferente do conteúdo?</h4>
+ <p>A palestra pode ser adaptada ao tema do evento, ao tempo disponível e à necessidade específica da igreja. Converse antes e a gente alinha.</p>
+ </div>
+ <div class="faq-item">
+ <h4>Posso contratar mais de uma palestra?</h4>
+ <p>Sim. Palestras avulsas, retiros de casais, encontros de fim de semana — há condições especiais para múltiplos encontros. É só perguntar.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- FINAL CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <div class="final-cta-inner">
-                <h2>Sua Igreja Pode Ser o Próximo Lugar de Restauração</h2>
-                <p>Cada casamento restaurado impacta famílias inteiras. Uma única palestra pode ser o início de uma transformação que ninguém viu chegar.</p>
-                <a href="https://wa.me/5518997130824?text=Olá%20Erick!%20Vi%20a%20landing%20page%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20palestra%20para%20nossa%20igreja." class="btn-primary" target="_blank">
-                    Falar no WhatsApp Agora
-                </a>
-            </div>
-        </div>
-    </section>
+ <!-- FINAL CTA -->
+ <section class="final-cta">
+ <div class="container">
+ <div class="final-cta-inner">
+ <h2>Sua Igreja Pode Ser o Próximo Lugar de Restauração</h2>
+ <p>Cada casamento restaurado impacta famílias inteiras. Uma única palestra pode ser o início de uma transformação que ninguém viu chegar.</p>
+ <a href="https://wa.me/5518997130824?text=Olá%20Erick!%20Vi%20a%20landing%20page%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20palestra%20para%20nossa%20igreja." class="btn-primary" target="_blank">
+ Falar no WhatsApp Agora
+ </a>
+ </div>
+ </div>
+ </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <p>Transformando Vidas · Erick Bianchini Garcia · Palestrante desde 2001</p>
-            <p>WhatsApp: <a href="https://wa.me/5518997130824" target="_blank">(18) 99713-0824</a></p>
-            <p style="margin-top: 10px; opacity: 0.5;">&copy; 2026 Transformando Vidas. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+ <!-- FOOTER -->
+ <footer>
+ <div class="container">
+ <p>Transformando Vidas · Erick Bianchini Garcia · Palestrante desde 2001</p>
+ <p>WhatsApp: <a href="https://wa.me/5518997130824" target="_blank">(18) 99713-0824</a></p>
+ <p style="margin-top: 10px; opacity: 0.5;">&copy; 2026 Transformando Vidas. Todos os direitos reservados.</p>
+ </div>
+ </footer>
 
-    <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/5518997130824?text=Olá%20Erick!%20Vi%20a%20landing%20page%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20palestra%20para%20nossa%20igreja." class="whatsapp-float" target="_blank">
-        💬 Falar no WhatsApp
-    </a>
+ <!-- WHATSAPP FLOAT -->
+ <a href="https://wa.me/5518997130824?text=Olá%20Erick!%20Vi%20a%20landing%20page%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20palestra%20para%20nossa%20igreja." class="whatsapp-float" target="_blank">
+ 💬 Falar no WhatsApp
+ </a>
 
 </body>
 </html>
